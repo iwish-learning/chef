@@ -1,0 +1,3 @@
+I, [2020-08-31T13:23:59.901968 #93067]  INFO -- Kitchen: -----> Starting Test Kitchen (v2.6.0)
+I, [2020-08-31T13:24:01.769359 #93067]  INFO -- Kitchen: -----> Converging <default-ubuntu-1804>...
+I, [2020-08-31T13:24:16.649263 #93067]  INFO -- Kitchen: -----> Test Kitchen is finished. (0m16.75s)

@@ -1,0 +1,57 @@
+I, [2020-08-31T13:24:01.769460 #93067]  INFO -- default-ubuntu-1804: -----> Converging <default-ubuntu-1804>...
+I, [2020-08-31T13:24:01.770788 #93067]  INFO -- default-ubuntu-1804: Preparing files for transfer
+I, [2020-08-31T13:24:01.770862 #93067]  INFO -- default-ubuntu-1804: Preparing dna.json
+I, [2020-08-31T13:24:01.771275 #93067]  INFO -- default-ubuntu-1804: Preparing cookbooks from project directory
+I, [2020-08-31T13:24:01.821042 #93067]  INFO -- default-ubuntu-1804: Removing non-cookbook files before transfer
+I, [2020-08-31T13:24:01.849013 #93067]  INFO -- default-ubuntu-1804: Preparing roles
+I, [2020-08-31T13:24:01.849800 #93067]  INFO -- default-ubuntu-1804: Preparing solo.rb
+I, [2020-08-31T13:24:02.257102 #93067]  INFO -- default-ubuntu-1804: -----> Chef installation detected (install only if missing)
+I, [2020-08-31T13:24:02.268671 #93067]  INFO -- default-ubuntu-1804: Transferring files to <default-ubuntu-1804>
+I, [2020-08-31T13:24:03.696703 #93067]  INFO -- default-ubuntu-1804: Starting Chef Infra Client, version 16.4.41
+I, [2020-08-31T13:24:04.863825 #93067]  INFO -- default-ubuntu-1804: resolving cookbooks for run list: ["git::default", "apache::default"]
+I, [2020-08-31T13:24:04.917076 #93067]  INFO -- default-ubuntu-1804: Synchronizing Cookbooks:
+I, [2020-08-31T13:24:04.919684 #93067]  INFO -- default-ubuntu-1804:   - git (10.0.0)
+I, [2020-08-31T13:24:04.920413 #93067]  INFO -- default-ubuntu-1804:   - apache (0.1.0)
+I, [2020-08-31T13:24:04.920841 #93067]  INFO -- default-ubuntu-1804: Installing Cookbook Gems:
+I, [2020-08-31T13:24:04.924972 #93067]  INFO -- default-ubuntu-1804: Compiling Cookbooks...
+I, [2020-08-31T13:24:04.934694 #93067]  INFO -- default-ubuntu-1804: Recipe: apache::default
+I, [2020-08-31T13:24:04.935970 #93067]  INFO -- default-ubuntu-1804:   * hostname[lsg] action set
+I, [2020-08-31T13:24:04.936351 #93067]  INFO -- default-ubuntu-1804:     * ohai[reload hostname] action nothing (skipped due to action :nothing)
+I, [2020-08-31T13:24:04.961918 #93067]  INFO -- default-ubuntu-1804:     * execute[set hostname to lsg] action run (skipped due to not_if)
+I, [2020-08-31T13:24:04.963585 #93067]  INFO -- default-ubuntu-1804:     * file[/etc/hosts] action create (skipped due to not_if)
+I, [2020-08-31T13:24:05.005513 #93067]  INFO -- default-ubuntu-1804:     * execute[hostnamectl set-hostname lsg] action run (skipped due to not_if)
+I, [2020-08-31T13:24:05.006238 #93067]  INFO -- default-ubuntu-1804:      (up to date)
+I, [2020-08-31T13:24:05.010817 #93067]  INFO -- default-ubuntu-1804: ------------------- using branch: br-b -------------------
+I, [2020-08-31T13:24:05.013528 #93067]  INFO -- default-ubuntu-1804:   Converging 16 resources
+I, [2020-08-31T13:24:05.014081 #93067]  INFO -- default-ubuntu-1804: Recipe: git::package
+I, [2020-08-31T13:24:05.015711 #93067]  INFO -- default-ubuntu-1804:   * git_client[default] action install
+I, [2020-08-31T13:24:05.157249 #93067]  INFO -- default-ubuntu-1804:     * apt_package[default :create git] action install (up to date)
+I, [2020-08-31T13:24:05.157879 #93067]  INFO -- default-ubuntu-1804:      (up to date)
+I, [2020-08-31T13:24:05.158377 #93067]  INFO -- default-ubuntu-1804: Recipe: apache::default
+I, [2020-08-31T13:24:05.167153 #93067]  INFO -- default-ubuntu-1804:   * cookbook_file[/etc/motd] action create (up to date)
+I, [2020-08-31T13:24:05.173839 #93067]  INFO -- default-ubuntu-1804:   * cookbook_file[/etc/hostname] action create (up to date)
+I, [2020-08-31T13:24:05.174765 #93067]  INFO -- default-ubuntu-1804:   * hostname[lsg] action nothing (skipped due to action :nothing)
+I, [2020-08-31T13:24:05.182601 #93067]  INFO -- default-ubuntu-1804:   * template[/etc/apt/sources.list] action create (up to date)
+I, [2020-08-31T13:24:05.182798 #93067]  INFO -- default-ubuntu-1804: Recipe: apache::git-training
+I, [2020-08-31T13:24:05.184055 #93067]  INFO -- default-ubuntu-1804:   * apt_update[] action periodic (up to date)
+I, [2020-08-31T13:24:05.185363 #93067]  INFO -- default-ubuntu-1804:   * git_client[install it] action install
+I, [2020-08-31T13:24:05.323383 #93067]  INFO -- default-ubuntu-1804:     * apt_package[install it :create git] action install (up to date)
+I, [2020-08-31T13:24:05.323841 #93067]  INFO -- default-ubuntu-1804:      (up to date)
+I, [2020-08-31T13:24:05.325603 #93067]  INFO -- default-ubuntu-1804:   * linux_user[lsg] action create (up to date)
+I, [2020-08-31T13:24:05.327204 #93067]  INFO -- default-ubuntu-1804:   * group[lsg_group] action create (up to date)
+I, [2020-08-31T13:24:05.329647 #93067]  INFO -- default-ubuntu-1804:   * directory[/home/lsg/.ssh] action create (up to date)
+I, [2020-08-31T13:24:05.337671 #93067]  INFO -- default-ubuntu-1804:   * cookbook_file[/home/lsg/.ssh/id_rsa] action create (up to date)
+I, [2020-08-31T13:24:05.345281 #93067]  INFO -- default-ubuntu-1804:   * template[/home/lsg/ssh_wrapper] action create (up to date)
+I, [2020-08-31T13:24:05.372325 #93067]  INFO -- default-ubuntu-1804:   * git_config[add lsg to git] action set (up to date)
+I, [2020-08-31T13:24:05.423997 #93067]  INFO -- default-ubuntu-1804:   * git_config[add lsg to git] action set (up to date)
+I, [2020-08-31T13:24:09.210858 #93067]  INFO -- default-ubuntu-1804:   * git[/home/lsg/training] action sync
+I, [2020-08-31T13:24:16.544443 #93067]  INFO -- default-ubuntu-1804:     - set up remote tracking branches for git@github.com:iwish-learning/chef.git at origin
+I, [2020-08-31T13:24:16.545290 #93067]  INFO -- default-ubuntu-1804:     - fetch updates for origin
+I, [2020-08-31T13:24:16.545654 #93067]  INFO -- default-ubuntu-1804: Recipe: apache::nginx
+I, [2020-08-31T13:24:16.585545 #93067]  INFO -- default-ubuntu-1804:   * log[nginx configuration] action write
+I, [2020-08-31T13:24:16.585750 #93067]  INFO -- default-ubuntu-1804: 
+I, [2020-08-31T13:24:16.585899 #93067]  INFO -- default-ubuntu-1804: Running handlers:
+I, [2020-08-31T13:24:16.586105 #93067]  INFO -- default-ubuntu-1804: Running handlers complete
+I, [2020-08-31T13:24:16.586845 #93067]  INFO -- default-ubuntu-1804: Chef Infra Client finished, 1/23 resources updated in 12 seconds
+I, [2020-08-31T13:24:16.600789 #93067]  INFO -- default-ubuntu-1804: Downloading files from <default-ubuntu-1804>
+I, [2020-08-31T13:24:16.649037 #93067]  INFO -- default-ubuntu-1804: Finished converging <default-ubuntu-1804> (0m14.88s).
