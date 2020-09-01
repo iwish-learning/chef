@@ -50,7 +50,7 @@ knife bootstrap 18.183.95.7 -i ~/Desktop/SIT/aws/aws-free-kit.pem -x ubuntu --su
 # create admin
 sudo chef-server-ctl user-create dlwang Danny Wang dlwang@merkleinc.com 'P@ssMKL7' --filename ~/.ssh/chef_server_admin.pem
 sudo chef-server-ctl user-create bxue Jacob xue bxue@merkleinc.com 'P@ssMKL7' --filename ~/.ssh/bxue_chef_server_admin.pem
-sudo chef-server-ctl user-create dlwang Danny Wang dlwang@merkleinc.com 'P@ssMKL7' --filename ~/.ssh/chef_server_admin.pem
+sudo chef-server-ctl user-create jercai Jerry Cai jercai@merkleinc.com 'P@ssMKL7' --filename ~/.ssh/jercai_server_admin.pem
 
 # create orgnazition
 sudo chef-server-ctl org-create lsg 'Merkle China LSG' --association_user dlwang --filename ~/.ssh/org-validator.pem
